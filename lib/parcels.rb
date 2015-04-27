@@ -1,20 +1,20 @@
 class Parcels
-  define_method(:initialize) do |length, width, heighth, weight|
+  define_method(:initialize) do |length, width, height, weight|
     @length = length
     @width = width
-    @heighth = heighth
+    @height = height
     @weight = weight
   end
 
   define_method(:volume) do
-    volume = @length * @width *  @heighth
+    volume = @length * @width *  @height
     volume
   end
 
 
   def oversize
 
-    @length + @width*2 + @heighth*2 > 120
+    @length + @width*2 + @height*2 > 120
 
 
   end

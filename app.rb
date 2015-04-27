@@ -9,12 +9,12 @@ end
 
 get('/results') do
 
-  @length = params.fetch('length')
-  @width = params.fetch('width')
-  @heigth = params.fetch('height')
-  @weight = params.fetch('weight')
-  
-
+  @length = params.fetch('length').to_i
+  @width = params.fetch('width').to_i
+  @height = params.fetch('height').to_i
+  @weight = params.fetch('weight').to_i
+  @test_parcel = Parcels.new(@length, @width, @height, @weight)
+  @test_parcel = @test_parcel.cost_to_ship()
 
   erb(:results)
 
