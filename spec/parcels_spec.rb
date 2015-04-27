@@ -38,4 +38,10 @@ describe(Parcels) do
       expect(test_parcel.oversize()).to(eq(false))
     end
   end
+  describe('cost_to_ship') do
+    it("adds additional cost if the package is oversized") do
+    test_parcel = Parcels.new(10,15,100,25)
+    expect(test_parcel.cost_to_ship()).to(eq(4))
+    end
+  end
 end
