@@ -25,5 +25,17 @@ describe(Parcels) do
     end
   end
 
+  describe('oversize') do
+    it("tests to see if a package is oversized or not") do
+      test_parcel = Parcels.new(10,15,100,70)
+      expect(test_parcel.oversize()).to(eq(true))
+    end
+  end
 
+  describe('oversize') do
+    it("tests to see if a package is oversized or not") do
+      test_parcel = Parcels.new(10,15,30,70)
+      expect(test_parcel.oversize()).to(eq(false))
+    end
+  end
 end

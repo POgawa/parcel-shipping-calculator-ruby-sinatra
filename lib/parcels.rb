@@ -14,6 +14,9 @@ class Parcels
 
   def oversize
 
+    @length + @width*2 + @heighth*2 > 120
+
+
   end
 
 
