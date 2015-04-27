@@ -16,6 +16,9 @@ get('/results') do
   @test_parcel = Parcels.new(@length, @width, @height, @weight)
   @test_parcel = @test_parcel.cost_to_ship()
 
+
+
+
   erb(:results)
 
 end
